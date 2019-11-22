@@ -50,8 +50,8 @@
                     <h2 class="mb-4 mt-0 text-center">Report Page</h2>
 
                     <div>
-                        Welcome Your bill for: <?php echo $_POST["billName"]; ?><br>
-                        Came out to the amount of: <?php echo $_POST["bill"]; ?>
+                        Welcome Your bill for: <?php echo $_SESSION["billName"]; ?><br>
+                        Came out to the amount of: <?php echo $_SESSION["bill"]; ?>
                     </div>
 
 
