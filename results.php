@@ -1,8 +1,6 @@
 
-<!-- END nav
-Welcome <?php echo $_POST["bill"]; ?><br>
-Your email address is: <?php echo $_POST["billName"]; ?>
--->
+
+
 
 
 
@@ -50,18 +48,12 @@ Your email address is: <?php echo $_POST["billName"]; ?>
             <div class="col-md-6 relative align-self-center">
                 <div action="#" class="bg-white rounded pb_form_v1">
                     <h2 class="mb-4 mt-0 text-center">Report Page</h2>
+
                     <div>
-                        Bill:
+                        Welcome Your bill for: <?php echo $_POST["billName"]; ?><br>
+                        Came out to the amount of: <?php echo $_POST["bill"]; ?>
                     </div>
-                    <div>
-                        Bill2:
-                    </div>
-                    <div>
-                        Bill3:
-                    </div>
-                    <div>
-                        Total:
-                    </div>
+
 
                     </form>
                 </div>
