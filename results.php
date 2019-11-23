@@ -1,8 +1,7 @@
-
-
-
-
-
+<?php
+$_SESSION['billName'] = $_POST['billName'];
+$_SESSION['bill'] = $_POST['bill'];
+?>
 
 <!DOCTYPE html>s
 <html lang="en">
@@ -50,9 +49,10 @@
                     <h2 class="mb-4 mt-0 text-center">Report Page</h2>
 
                     <div>
-                        Welcome Your bill for: <?php echo $_SESSION["billName"]; ?><br>
-                        Came out to the amount of: <?php echo $_SESSION["bill"]; ?>
+                        Welcome Your bill for: <?php echo $_POST["billName"]; ?><br>
+                        Came out to the amount of: <?php echo $_POST["bill"]; ?>
                     </div>
+
 
 
                     </form>
