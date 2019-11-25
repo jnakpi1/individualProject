@@ -119,7 +119,7 @@
 
                     Result: <input type="text" name="txtres" > <br>
 
-                    <input type="button" value="Calculate" onclick="sumValues()">
+                    <input type="submit" value="Calculate" onclick="sumValues()">
 
                     <!-- END section
 
