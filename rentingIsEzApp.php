@@ -116,6 +116,7 @@
                     <div class="form-group">
                         <input type="text" class="form-control py-3 reverse" placeholder="Bill Amount" name="bill8">
                     </div>
+                    Result: <input type="text" name="txtres" > <br>
 
                     <input type="button" value="Calculate" onclick="sumValues()"> <br>
                     <!-- END section
