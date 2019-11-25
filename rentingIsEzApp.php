@@ -117,6 +117,10 @@
                         <input type="text" class="form-control py-3 reverse" placeholder="Bill Amount" name="bill8">
                     </div>
 
+                    Result: <input type="text" name="txtres" > <br>
+
+                    <input type="button" value="Calculate" onclick="sumValues()">
+
                     <!-- END section
 
                     <input type="hidden" name="txtres"> <br>
@@ -185,9 +189,7 @@
                         <!-- END section
                         <input type ="button" class= "mt-2 btn btn-success btn-lg btn-block" onclick="sumValues()" >
                         -->
-                        Result: <input type="text" name="txtres" > <br>
 
-                        <input type="button" value="Calculate" onclick="sumValues()"> <br>
 
 
 
