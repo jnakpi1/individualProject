@@ -69,14 +69,18 @@
 
 
                     <h2 class="mb-4 mt-0 text-center">Fill in the required blanks</h2>
+                    <p> Stuck? Come check out the <a href="Steps.html"> step by step page</a>
+                    </p>
                     <div class="form-group">
                         <input type="number" class="form-control py-3 reverse"
-                               placeholder="How many roomates do you have?" name="roommateNum" required>
+                               placeholder="How many roommates do you have?" name="roommateNum" required>
                     </div>
+
                     <div class="form-group">
                         Enter The All The Bills Needed. When finished leave the other spaces blank
                         <input type="text" class="form-control py-3 reverse" placeholder="Bill Name" id="billName1">
                     </div>
+
                     <div class="form-group">
                         <input type="number" class="form-control py-3 reverse" placeholder="Bill Amount" id="bill1">
                     </div>
@@ -144,14 +148,6 @@
                         function sumValues() {
                             var num1, num2, num3, num4, num5, num6, num7, num8, res, num1Name, num2Name, num3Name,
                                 num4Name, num5Name, num6Name, num7Name, num8Name;
-                            <!--
-
-                            function money_round(num) {
-                                return Math.ceil(num * 100) / 100;
-                            }
-                            -->
-
-
 
                             if ((document.input.bill1.value != null) && (document.input.billName1.value != null)) {
                                 num1 = Math.ceil((Number(document.input.bill1.value) / (document.input.roommateNum.value))*100)/100;
@@ -212,9 +208,8 @@
                             }
 
                             res = num1 + num2 + num3 + num4 + num4 + num5 + num6 + num7 + num8;
-                            document.input.total.value = res;
-
-
+                            document.input.totalPerPerson.value = res;
+                            document.input.totalPaypalNumber.value=res;
                         }
                     </script>
 
@@ -222,6 +217,7 @@
                     <input type="button" class="btn btn-primary btn-lg btn-block pb_btn-pill  btn-shadow-blue"
                            value="Calculate" onclick="sumValues()">
 
+<!-- SECTION START (RESULT PAGE)-->
                     <div>
                         <h2 class="mb-1 mt-0 text-center">Report Page</h2>
                         Bill 1(Per Person)<br>
@@ -249,17 +245,25 @@
                         <input type="text" name="nameBilling8" readonly><br> <!--BILL NAME8 -->
                         <input type="text" name="billResult8" readonly><br>
 
-                        In Total Each person will pay: $<input  type="text"  name="totalls"><br>
+                        In Total Each person will pay: $<input type="text" name="totalPerPerson" readonly><br>
+<!--                        Variable Testing: <input type="text" name="txtres"><br>-->
+
 
                     </div>
-                    <!--
-                                        <input class="btn btn-primary btn-lg btn-block pb_btn-pill  btn-shadow-blue" name="txtres" onclick=sumValues()><br>Calculate</input>
-                    -->
-                    </fieldset>
-                    <div class="form-group">
-                        <!-- END section
-                        <input type ="button" class= "mt-2 btn btn-success btn-lg btn-block" onclick="sumValues()" >
-                        -->
+                    <!-- SECTION END (RESULT PAGE)-->
+                    <div>
+                        <p> Stuck? Come check out the <a href="Steps.html"> step by step page</a></p>
+
+                            <h2 class="mb-1 mt-0 text-center">Fill Information To Send to recipients</h2>
+
+                            <div class="form-group">
+                                <input type="number" class="form-control py-3 reverse"
+                                       placeholder="What is your paypal.me username?" id="paypalUser" required>
+                            </div>
+                        <input name="totalPaypalNumber" readonly><br>
+
+
+
                     </div>
                 </form>
             </div>
