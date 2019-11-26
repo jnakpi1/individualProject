@@ -133,76 +133,123 @@
                         <p id="billing7"></p>
                         <p id="billing8"></p>
                     </div>
+                    <div class="form-group">
+                        <p id="billingName1"></p>
+
+                    </div>
 
                     <script type="text/javascript">
 
 
                         function sumValues() {
-                            var num1, num2, num3, num4, num5, num6, num7, num8, res;
+                            var num1, num2, num3, num4, num5, num6, num7, num8, res, num1Name, num2Name, num3Name,
+                                num4Name, num5Name, num6Name, num7Name, num8Name;
+                            <!--
+
+                            function money_round(num) {
+                                return Math.ceil(num * 100) / 100;
+                            }
+                            -->
+
+
 
                             if ((document.input.bill1.value != null) && (document.input.billName1.value != null)) {
-                                num1 = Number(document.input.bill1.value) / (document.input.roommateNum.value);
+                                num1 = Math.ceil((Number(document.input.bill1.value) / (document.input.roommateNum.value))*100)/100;
                                 document.input.billResult1.value = num1;
+                                num1Name = String(document.input.billName1.value);
+                                document.input.nameBilling.value = num1Name;
+
 
                             }
                             if ((document.input.bill2.value != null) && (document.input.billName2.value != null)) {
-                                num2 = Number(document.input.bill2.value) / (document.input.roommateNum.value);
+                                num2 = Math.ceil((Number(document.input.bill2.value) / (document.input.roommateNum.value))*100)/100
                                 document.input.billResult2.value = num2;
+                                num2Name = String(document.input.billName2.value);
+                                document.input.nameBilling2.value = num2Name;
 
                             }
                             if ((document.input.bill3.value != null) && (document.input.billName3.value != null)) {
-                                num3 = Number(document.input.bill3.value) / (document.input.roommateNum.value);
+                                num3 = Math.ceil((Number(document.input.bill3.value) / (document.input.roommateNum.value))*100)/100
                                 document.input.billResult3.value = num3;
+                                num3Name = String(document.input.billName3.value);
+                                document.input.nameBilling3.value = num3Name;
 
                             }
                             if ((document.input.bill4.value != null) && (document.input.billName4.value != null)) {
-                                num4 = Number(document.input.bill4.value) / (document.input.roommateNum.value);
+                                num4 = Math.ceil((Number(document.input.bill4.value) / (document.input.roommateNum.value))*100)/100
                                 document.input.billResult4.value = num4;
+                                num4Name = String(document.input.billName4.value);
+                                document.input.nameBilling4.value = num4Name;
 
                             }
                             if ((document.input.bill5.value != null) && (document.input.billName5.value != null)) {
-                                num5 = Number(document.input.bill5.value) / (document.input.roommateNum.value);
+                                num5 = Math.ceil((Number(document.input.bill5.value) / (document.input.roommateNum.value))*100)/100
                                 document.input.billResult5.value = num5;
+                                num5Name = String(document.input.billName5.value);
+                                document.input.nameBilling5.value = num5Name;
 
                             }
                             if ((document.input.bill6.value != null) && (document.input.billName6.value != null)) {
-                                num6 = Number(document.input.bill6.value) / (document.input.roommateNum.value);
+                                num6 = Math.ceil((Number(document.input.bill6.value) / (document.input.roommateNum.value))*100)/100
                                 document.input.billResult6.value = num6;
+                                num6Name = String(document.input.billName6.value);
+                                document.input.nameBilling6.value = num6Name;
 
                             }
                             if ((document.input.bill7.value != null) && (document.input.billName7.value != null)) {
-                                num7 = Number(document.input.bill7.value) / (document.input.roommateNum.value);
+                                num7 = Math.ceil((Number(document.input.bill7.value) / (document.input.roommateNum.value))*100)/100
                                 document.input.billResult7.value = num7;
+                                num7Name = String(document.input.billName7.value);
+                                document.input.nameBilling7.value = num7Name;
 
                             }
                             if ((document.input.bill8.value != null) && (document.input.billName8.value != null)) {
-                                num8 = Number(document.input.bill7.value) / (document.input.roommateNum.value);
+                                num8 = Math.ceil((Number(document.input.bill8.value) / (document.input.roommateNum.value))*100)/100
                                 document.input.billResult8.value = num8;
+                                num8Name = String(document.input.billName8.value);
+                                document.input.nameBilling8.value = num8Name;
 
                             }
 
                             res = num1 + num2 + num3 + num4 + num4 + num5 + num6 + num7 + num8;
-                            document.input.txtres.value = res;
+                            document.input.total.value = res;
 
 
                         }
                     </script>
 
-                    Variable Testing: <input type="text" name="txtres"><br>
+
                     <input type="button" class="btn btn-primary btn-lg btn-block pb_btn-pill  btn-shadow-blue"
                            value="Calculate" onclick="sumValues()">
 
                     <div>
                         <h2 class="mb-1 mt-0 text-center">Report Page</h2>
+                        Bill 1(Per Person)<br>
+                        <input type="text" name="nameBilling" readonly><br>  <!--BILL NAME1 -->
+                        <input type="text" name="billResult1" readonly><br>
+                        Bill 2(Per Person)<br>
+                        <input type="text" name="nameBilling2" readonly><br> <!--BILL NAME2 -->
+                        <input type="text" name="billResult2" readonly><br>
+                        Bill 3(Per Person)<br>
+                        <input type="text" name="nameBilling3" readonly><br> <!--BILL NAME3 -->
+                        <input type="text" name="billResult3" readonly><br>
+                        Bill 4(Per Person)<br>
+                        <input type="text" name="nameBilling4" readonly><br> <!--BILL NAME4 -->
+                        <input type="text" name="billResult4" readonly><br>
+                        Bill 5(Per Person)<br>
+                        <input type="text" name="nameBilling5" readonly><br> <!--BILL NAME5 -->
+                        <input type="text" name="billResult5" readonly><br>
+                        Bill 6(Per Person)<br>
+                        <input type="text" name="nameBilling6" readonly><br> <!--BILL NAME6 -->
+                        <input type="text" name="billResult6" readonly><br>
+                        Bill 7(Per Person)<br>
+                        <input type="text" name="nameBilling7" readonly><br> <!--BILL NAME7 -->
+                        <input type="text" name="billResult7" readonly><br>
+                        Bill 8(Per Person)<br>
+                        <input type="text" name="nameBilling8" readonly><br> <!--BILL NAME8 -->
+                        <input type="text" name="billResult8" readonly><br>
 
-                        BIll 1(Per Person): <input type="text" name="billResult1" readonly><br>
-                        Bill 2(Per Person): <input type="text" name="billResult2" readonly><br>
-                        Bill 3(Per Person): <input type="text" name="billResult3" readonly><br>
-                        Bill 4(Per Person): <input type="text" name="billResult4" readonly><br>
-                        Bill 5(Per Person): <input type="text" name="billResult5" readonly><br>
-                        Bill 6(Per Person): <input type="text" name="billResult6" readonly><br>
-                        Bill 7(Per Person): <input type="text" name="billResult7" readonly><br>
-                        Bill 8(Per Person): <input type="text" name="billResult8" readonly><br>
+                        In Total Each person will pay: $<input  type="text"  name="totalls"><br>
 
                     </div>
                     <!--
