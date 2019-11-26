@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- END section
+    <script>
+        $(document).ready(function () {
+
+
+            $("#btn2").click(function () {
+                $("fieldset").append(" <div class=\"form-group\">\n" +
+                    "                        <input type=\"text\" class=\"form-control py-3 reverse mt-4 mt-4\" placeholder=\"Bill Name\">\n" +
+                    "                    </div>\n" +
+                    "                    <div class=\"form-group\">\n" +
+                    "                        <input type=\"text\" class=\"form-control py-3 reverse\" placeholder=\"Bill Amount\">\n" +
+                    "                    </div>");
+            });
+        });
+    </script>
+    -->
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600|Montserrat:200,300,400"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/law-icons/font/flaticon.css">
+
+    <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+
+    <link rel="stylesheet" href="assets/css/helpers.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/landing-2.css">
+
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark pb_navbar pb_scrolled-light" id="pb-navbar">
+    <div class="container">
+        <a class=" mt-1 navbar-brand" href="index.html">RentingIsEasy</a>
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#probootstrap-navbar"
+                aria-controls="probootstrap-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span><i class="ion-navicon"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="probootstrap-navbar">
+            <ul class="navbar-nav ml-auto">
+                <p class="mb-5"><a class="btn btn-success btn-lg pb_btn-pill smoothscroll" href="index.html"><span
+                        class="pb_font-14 text-uppercase pb_letter-spacing-1">Back To Home</span></a></p>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<section>
+
+    <div class="container mt-lg-5">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-md-6 relative align-self-center">
+
+
+                <form name="input" action="rentingIsEzApp.html" class="bg-white rounded pb_form_v1" method="post"
+                      autocomplete="off">
+
+
+                    <h2 class="mb-4 mt-0 text-center">Fill in the required blanks</h2>
+                    <div class="form-group">
+                        <input type="number" class="form-control py-3 reverse"
+                               placeholder="How many roomates do you have?" name="roommateNum" required>
+                    </div>
+                    <div class="form-group">
+                        Enter The All The Bills Needed. When finished leave the other spaces blank
+                        <input type="text" class="form-control py-3 reverse" placeholder="Bill Name" id="billName1">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control py-3 reverse" placeholder="Bill Amount" id="bill1">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control py-3 reverse" placeholder="Bill Name" id="billName2">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control py-3 reverse" placeholder="Bill Amount" id="bill2">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control py-3 reverse" placeholder="Bill Name" id="billName3">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control py-3 reverse" placeholder="Bill Amount" id="bill3">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control py-3 reverse" placeholder="Bill Name" id="billName4">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control py-3 reverse" placeholder="Bill Amount" id="bill4">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control py-3 reverse" placeholder="Bill Name" id="billName5">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control py-3 reverse" placeholder="Bill Amount" id="bill5">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control py-3 reverse" placeholder="Bill Name" id="billName6">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control py-3 reverse" placeholder="Bill Amount" id="bill6">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control py-3 reverse" placeholder="Bill Name" id="billName7">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control py-3 reverse" placeholder="Bill Amount" id="bill7">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control py-3 reverse" placeholder="Bill Name" id="billName8">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control py-3 reverse" placeholder="Bill Amount" id="bill8">
+                    </div>
+
+                    <div class="form-group">
+                        <p id="billing1"></p>
+                        <p id="billing2"></p>
+                        <p id="billing3"></p>
+                        <p id="billing4"></p>
+                        <p id="billing5"></p>
+                        <p id="billing6"></p>
+                        <p id="billing7"></p>
+                        <p id="billing8"></p>
+                    </div>
+
+                    <script type="text/javascript">
+
+
+                        function sumValues() {
+                            var num1, num2, num3, num4, num5, num6, num7, num8, res;
+
+                            if ((document.input.bill1.value != null) && (document.input.billName1.value != null)) {
+                                num1 = Number(document.input.bill1.value) / (document.input.roommateNum.value);
+                                document.input.billResult1.value = num1;
+
+                            }
+                            if ((document.input.bill2.value != null) && (document.input.billName2.value != null)) {
+                                num2 = Number(document.input.bill2.value) / (document.input.roommateNum.value);
+                                document.input.billResult2.value = num2;
+
+                            }
+                            if ((document.input.bill3.value != null) && (document.input.billName3.value != null)) {
+                                num3 = Number(document.input.bill3.value) / (document.input.roommateNum.value);
+                                document.input.billResult3.value = num3;
+
+                            }
+                            if ((document.input.bill4.value != null) && (document.input.billName4.value != null)) {
+                                num4 = Number(document.input.bill4.value) / (document.input.roommateNum.value);
+                                document.input.billResult4.value = num4;
+
+                            }
+                            if ((document.input.bill5.value != null) && (document.input.billName5.value != null)) {
+                                num5 = Number(document.input.bill5.value) / (document.input.roommateNum.value);
+                                document.input.billResult5.value = num5;
+
+                            }
+                            if ((document.input.bill6.value != null) && (document.input.billName6.value != null)) {
+                                num6 = Number(document.input.bill6.value) / (document.input.roommateNum.value);
+                                document.input.billResult6.value = num6;
+
+                            }
+                            if ((document.input.bill7.value != null) && (document.input.billName7.value != null)) {
+                                num7 = Number(document.input.bill7.value) / (document.input.roommateNum.value);
+                                document.input.billResult7.value = num7;
+
+                            }
+                            if ((document.input.bill8.value != null) && (document.input.billName8.value != null)) {
+                                num8 = Number(document.input.bill7.value) / (document.input.roommateNum.value);
+                                document.input.billResult8.value = num8;
+
+                            }
+
+                            res = num1 + num2 + num3 + num4 + num4 + num5 + num6 + num7 + num8;
+                            document.input.txtres.value = res;
+
+
+                        }
+                    </script>
+
+                    Variable Testing: <input type="text" name="txtres"><br>
+                    <input type="button" class="btn btn-primary btn-lg btn-block pb_btn-pill  btn-shadow-blue"
+                           value="Calculate" onclick="sumValues()">
+
+                    <div>
+                        <h2 class="mb-1 mt-0 text-center">Report Page</h2>
+
+                        BIll 1(Per Person): <input type="text" name="billResult1" readonly><br>
+                        Bill 2(Per Person): <input type="text" name="billResult2" readonly><br>
+                        Bill 3(Per Person): <input type="text" name="billResult3" readonly><br>
+                        Bill 4(Per Person): <input type="text" name="billResult4" readonly><br>
+                        Bill 5(Per Person): <input type="text" name="billResult5" readonly><br>
+                        Bill 6(Per Person): <input type="text" name="billResult6" readonly><br>
+                        Bill 7(Per Person): <input type="text" name="billResult7" readonly><br>
+                        Bill 8(Per Person): <input type="text" name="billResult8" readonly><br>
+
+                    </div>
+                    <!--
+                                        <input class="btn btn-primary btn-lg btn-block pb_btn-pill  btn-shadow-blue" name="txtres" onclick=sumValues()><br>Calculate</input>
+                    -->
+                    </fieldset>
+                    <div class="form-group">
+                        <!-- END section
+                        <input type ="button" class= "mt-2 btn btn-success btn-lg btn-block" onclick="sumValues()" >
+                        -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+</section>
+
+</body>
+</html>
