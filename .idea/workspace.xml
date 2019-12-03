@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1e73f8f-8500-4f17-bb76-bd2a98293885" name="Default Changelist" comment="s">
+      <change afterPath="$PROJECT_DIR$/sendMail.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentingIsEzApp.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentingIsEzApp.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +81,8 @@
       <workItem from="1574624892981" duration="15807000" />
       <workItem from="1574737334631" duration="111000" />
       <workItem from="1574779100908" duration="14416000" />
-      <workItem from="1575320032734" duration="3446000" />
+      <workItem from="1575320032734" duration="6463000" />
+      <workItem from="1575390564478" duration="8362000" />
     </task>
     <servers />
   </component>
@@ -112,5 +114,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/rentingIsEzApp.html</url>
+          <line>291</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

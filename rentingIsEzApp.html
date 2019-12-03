@@ -64,7 +64,7 @@
             <div class="col-md-6 relative align-self-center">
 
 
-                <form name="input" action="rentingIsEzApp.html" class="bg-white rounded pb_form_v1" method="post"
+                <form name="input" action="sendMail.php" class="bg-white rounded pb_form_v1" method="post"
                       autocomplete="off">
 
 
@@ -126,6 +126,12 @@
                     <div class="form-group">
                         <input type="number" class="form-control py-3 reverse" placeholder="Bill Amount" id="bill8">
                     </div>
+
+
+
+
+
+
 
                     <div class="form-group">
                         <p id="billing1"></p>
@@ -204,15 +210,12 @@
                                 document.input.billResult8.value = num8;
                                 num8Name = String(document.input.billName8.value);
                                 document.input.nameBilling8.value = num8Name;
-
                             }
-
                             res = num1 + num2 + num3 + num4 + num4 + num5 + num6 + num7 + num8;
                             document.input.totalPerPerson.value = res;
                             document.input.totalPaypalNumber.value=res;
                         }
                     </script>
-
 
                     <input type="button" class="btn btn-primary btn-lg btn-block pb_btn-pill  btn-shadow-blue"
                            value="Calculate" onclick="sumValues()">
@@ -256,25 +259,71 @@
 
                             <h2 class="mb-1 mt-0 text-center">Fill Information To Send to recipients</h2>
 
+
                         <div class="form-group">
                             <input type="text" class="form-control py-3 reverse" placeholder="What is your paypal Username?" id="PaypalUserName">
                         </div>
+
+                        <!-- Button -->
+                        <input type="button" class="btn btn-primary btn-lg btn-block pb_btn-pill  btn-shadow-blue"
+                               value="GetLink" onclick="printLink()">
+
+                        <!-- Showing Information -->
                         <div>
 
+                            <!--Shows UserName -->
+                            UserName:<input type="text" name="unPaypal" readonly><br>
+                            Total:   <input type="text" id="totalPaypalNumber" readonly><br>
+                            Link: <
+
                         </div>
+                        <script type="text/javascript">
 
-<!--                        <p>-->
-<!--                            <a href="paypal.me/" + paypalUserName + / + totalPaypalNumber ></a>-->
-<!--                        </p>-->
+                            function printLink(){
+                                var paypalName, userGet, totalAmount,link;
 
-                        <!-- Using the number from the amount per person
-                        <input name="totalPaypalNumber" readonly><br>
+                                paypalName = String (document.input.PaypalUserName.value);
+                                // document.input.unPaypal.value = paypalName;
+
+                                userGet = document.getElementById("PaypalUserName").value;
+                                totalAmount = document.getElementById("totalPaypalNumber").value;
+                                link = "paypal.me/" + userGet + "/" + totalAmount;
+                                document.input.unPaypal.value = link;
+                            }
+
+
+                        </script>
+
+<!--
+                        <script>
+                            function printLink() {
+
+
+
+                                num1Name = String(document.input.billName1.value);
+                                document.input.nameBilling.value = num1Name;
+
+                                var paypalName = String (document.input.PayPalUserName.value);
+                                document.input.PaypalUserName.value = paypalName;
+                                var userGet = document.getElementById("PaypalUserName").value;
+                                var totalAmount = document.getElementById("totalPaypalNumber").value;
+                                var link = "paypal.me/" + userGet + "/" + totalAmount;
+                                document.input.displayLink.value = link;
+                            }
+                        </script>
                         -->
 
 
 
 
+                        <!-- User Name:<input type="text" name="paypalName" readonly><br> -->
                     </div>
+                    <field>
+                        <div class="form-group">
+                            <input type="text" class="form-control py-3 reverse" placeholder="What email do you want to send this to?" id="email">
+                        </div>
+                    </field>
+                    <input type="submit" value="Send Email">
                 </form>
             </div>
         </div>
