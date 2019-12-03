@@ -3,12 +3,12 @@ $subject = 'Bill Report';
 $emailTo = $_POST['email'];
 echo $emailTo;
 $billOne = $_POST['nameBilling'] + $_POST['billResult1'];
-$billTwo = $_POST['nameBilling'] + $_POST['billResult1'];
+$billTwo = $_POST['nameBilling2'] + $_POST['billResult2'];
 $paypalLink= $_POST['unPaypal'];
 
 
-$message .= 'Bill 1: '.$billOne. + "" .$billTwo. "";
-$message .= 'Link to pay' .$paypalLink;
+$message .= 'Bill 1: '.$billOne. + " Bill 2: "  .$billTwo. " ";
+$message .= 'Link to pay ' .$paypalLink;
 
 
 mail($emailTo, $subject, $message);
