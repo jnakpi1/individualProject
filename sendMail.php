@@ -2,14 +2,17 @@
 $subject = 'Bill Report';
 $emailTo = $_POST['email'];
 echo $emailTo;
-$bill1 = $_POST['nameBilling'] + $_POST['billResult1'];
+echo $_POST['nameBilling'];
+
+
+$bill1 = $_POST['nameBilling'] + $_POST['billResult1']+ '<br>';
 $bill2 = $_POST['nameBilling2'] + $_POST['billResult2'];
-$bill3 = $_POST['nameBilling2'] + $_POST['billResult2'];
-$bill4 = $_POST['nameBilling2'] + $_POST['billResult2'];
-$bill5 = $_POST['nameBilling2'] + $_POST['billResult2'];
-$bill6 = $_POST['nameBilling2'] + $_POST['billResult2'];
-$bill7 = $_POST['nameBilling2'] + $_POST['billResult2'];
-$bill8 = $_POST['nameBilling2'] + $_POST['billResult2'];
+$bill3 = $_POST['nameBilling3'] + $_POST['billResult2'];
+$bill4 = $_POST['nameBilling4'] + $_POST['billResult2'];
+$bill5 = $_POST['nameBilling5'] + $_POST['billResult2'];
+$bill6 = $_POST['nameBilling6'] + $_POST['billResult2'];
+$bill7 = $_POST['nameBilling7'] + $_POST['billResult2'];
+$bill8 = $_POST['nameBilling8'] + $_POST['billResult2'];
 $paypalLink= $_POST['unPaypal'];
 
 $message .='Bills shown are divided by the amount of roomates';
