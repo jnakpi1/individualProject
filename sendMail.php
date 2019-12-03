@@ -1,8 +1,8 @@
 <?php
 $subject = 'Bill Report';
+$message .='Email has been sent to:  ';
 $emailTo = $_POST['email'];
 echo $emailTo;
-echo $_POST['nameBilling'];
 
 $billname1 = $_POST['nameBilling'];
 $bill1 = $_POST['billResult1'];
@@ -32,8 +32,8 @@ $bill8 = $_POST['billResult8'];
 $paypalLink= $_POST['unPaypal'];
 
 $message .='Bills shown are divided by the amount of roomates';
-$message .= 'Bill 1: '.$billname1;
-$message .= 'Bill Amount: '.$bill1;
+$message .= '    Bill 1: '.$billname1;
+$message .= '    Bill Amount: '.$bill1;
 
 $message .= '    Bill 2: '.$billname2;
 $message .= '    Bill Amount: '.$bill2;
